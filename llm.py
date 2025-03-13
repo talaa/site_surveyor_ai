@@ -81,7 +81,7 @@ Adhere strictly to the following rules:
     ```
     {{"destination": "CategoryName"}}
     ```
-3. The only valid values for the "destination" key are: "Outdoor Layout", "Cabinet", "RAN", and "Transmission".
+3. The only valid values for the "destination" key are: "Outdoor Layout", "Cabinet", "RAN", , "Transmission","antenna" and "others".
 
 Example Response:
 
