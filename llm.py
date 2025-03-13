@@ -81,7 +81,7 @@ Adhere strictly to the following rules:
     ```
     {{"destination": "CategoryName"}}
     ```
-3. The only valid values for the "destination" key are: "Outdoor Layout", "Cabinet", "RAN", , "Transmission","antenna" and "others".
+3. The only valid values for the "destination" key are: "Outdoor Layout", "Cabinet", "RAN", "Transmission","antenna" and "others".
 
 Example Response:
 
@@ -97,7 +97,7 @@ route_prompt = ChatPromptTemplate.from_messages(
 )
 
 class RouteQuery(BaseModel):
-    destination: Literal["Outdoor Layout", "Cabinet", "RAN", "Transmission","antenna","others"]
+    destination: Literal["Outdoor Layout", "Cabinet", "RAN","Transmission","antenna","others"]
 """
 route_chain = (
     route_prompt
