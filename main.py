@@ -35,6 +35,9 @@ def main():
     # Clean up old images before new uploads
     clean_temp_folder()  
     
+
+    
+
     # File upload section
     with st.expander("📤 Upload Site Images", expanded=True):
         uploaded_files = st.file_uploader(

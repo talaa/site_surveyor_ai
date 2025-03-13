@@ -2,6 +2,7 @@ from typing import Literal
 from pydantic import BaseModel
 import streamlit as st
 import json
+from dotenv import load_dotenv
 import base64
 from prompts import Outdoor_prompt_main,Cabinet_prompt_main,ran_prompt_main,transmission_prompt_main,antenna_prompt_main,others_prompt_main
 from tools import extract_json
@@ -13,6 +14,10 @@ from langchain_openai import ChatOpenAI
 
 # Initialize the model
 #model_name = "google/gemini-2.0-flash-thinking-exp:free"
+#loading the envirnoment variables 
+load_dotenv()
+
+
 model_name="anthropic/claude-3.7-sonnet"
 llm = ChatOpenAI(
     model=model_name,
