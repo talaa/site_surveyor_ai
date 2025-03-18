@@ -5,6 +5,7 @@ from tools import enhance_image_quality, generate_report,file_to_base64,clean_te
 import time
 import json
 import io
+import config
 
 def main():
 
@@ -35,7 +36,15 @@ def main():
     # Clean up old images before new uploads
     clean_temp_folder()  
     
-
+    # Add a dropdown menu in the sidebar to select the model name
+    config.model_name = st.sidebar.selectbox(
+        "Choose a model",
+        [
+            "anthropic/claude-3.7-sonnet",
+            "google/gemini-2.0-flash-thinking-exp:free",
+            # Add more model names here if needed
+        ]
+    )
     
 
     # File upload section
